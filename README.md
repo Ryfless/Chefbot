@@ -1,1 +1,1 @@
-# Let him cook
+# Let him cook 🔥
