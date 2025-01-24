@@ -32,6 +32,10 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/added.css" rel="stylesheet" >
+
+    <!-- Marked.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
   </head>
 
   <body>
@@ -71,6 +75,7 @@
     <!-- End Sidebar-->
 
     <main id="main" class="main">
+      <div class="chat-box" id="chatBox"></div>
       <h2 class="text-center title">Apa yang bisa saya bantu? &#128522;</h2>
 
       <div class="row justify-content-center my-4">
@@ -114,43 +119,8 @@
       <div class="d-flex justify-centent-center align-items-center gap-2">
         <div class="input-group">
           <span class="search-icon">
-            <div class="dropdown">
-              <span class="cursor-pointer dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-paperclip"></i>
-              </span>
-              <ul class="dropdown-menu">
-                <li>
-                  <div
-                    class="px-3 py-2 rounded-pill cursor-pointer"
-                  >
-                    <i class="bi bi-archive"></i>
-                    <span>Archived</span>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="px-3 py-2 rounded-pill cursor-pointer"
-                  >
-                    <i class="bi bi-card-image"></i>
-                    <span>Images</span>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="px-3 py-2 rounded-pill cursor-pointer"
-                    type="button"
-                    class="btn btn-primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                  >
-                    <i class="bi bi-box-arrow-up"></i>
-                    <span>Export</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </span>
-          <input type="text" id="userInput" class="form-i w-100" placeholder="Search...">
+          <input type="text" id="userInput" class="form-i w-100" placeholder="Tanyakan sesuatu...">
         </div>
         <button class="btn btn-send rounded-pill" id="sendButton">
           <i class="bi bi-send"></i>
@@ -218,5 +188,6 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/scripts.js"></script>
   </body>
 </html>
