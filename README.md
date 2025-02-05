@@ -1,6 +1,5 @@
 ![Alt text](logo.png)
 # Welcome to Chefbot 🔥🧑‍🍳
----
 
 # Main Flow of Application
 
