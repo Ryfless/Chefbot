@@ -1,0 +1,12 @@
+[
+    {
+        "role": "user",
+        "content": "Buatkan Saya Resep: Cara membuat nasi goreng simple",
+        "timestamp": "2025-2-05T12:34:56Z"
+    },
+    {
+        "role": "assistant",
+        "content": "Halo! Saya ChefBot,\n\nUntuk membantu Anda membuat nasi goreng super mudah dan lezat di rumah, saya akan mengatakan...\n\n**Cara Membuat Nasi Goreng Simple:**\n\n1. **Panaskan wajan**: Panaskan sedikit minyak sayur dalam sebuah wajan besar.\n2. **Masukkan bumbu-bumbu**: Tuangkan 1 sendok makan biji wijen dan 1 sendok makan garam kecil, serta 1/2 sendok teh merica bubuk ke dalam wajan.\n3. **Tunggu sejenak**: Biarkan bumbu-bumbu mendidih dan aroma wangi menempel di udara.\n4. **Masukkan sayuran**: Masukkan 200 gram sayuran (seperti kangkung, wortel, atau brokoli) ke dalam wajan dengan sedikit minyak sayur.\n5. **Tambahkan nasi**: Tuangkan 500 gram nasi putih ke dalam wajan dan aduk rata dengan sayuran.\n6. **Masak sampai matang**: Masak selama 10-12 menit atau hingga nasi matang dan sayuran berubah warna.\n7. **Siap disajikan**: Nasi goreng selesai! Sajikan dengan telur goreng, sambal, atau sayuran lainnya sesuai selera.\n\n**Tips:**\n\n* Gunakan nasi putih yang segar untuk mendapatkan rasa yang terbaik.\n* Jangan lupa untuk menambahkan 1 sendok makan minyak wijen ke dalam wajan agar aroma bumbu wangi lebih kuat!\n* Untuk membuat nasi goreng lebih sehat, Anda bisa menggunakan sayuran segar seperti kangkung atau wortel sebagai pengganti daging sapi.\n\nSelamat mencoba!",
+        "timestamp": "2025-2-05T12:35:12Z"
+    }
+]

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Chatbot</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="../src/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../src/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../src/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/quill/quill.snow.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/simple-datatables/style.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="../src/assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/assets/css/added.css">
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar header">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <div>
+            <img class="logo" src="../src/assets/img/logo.png" alt="Logo" />
+          </div>
+          <a href="login.html" class="fw-bold btn bg-gradient">Login</a>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar -->
+
+    <!-- content -->
+    <main class="main-content">
+      <div class="d-flex justify-content-between">
+        <h1 class="text-premium fw-bold">
+          Temukan Berbagai Insipirasi Untuk Memasak
+        </h1>
+        <button class="btn bg-gradient rounded-pill fw-bold">
+          <a href="dashboard.html" class="text-white text-decoration-none">
+            <i class="bi bi-plus"></i> New Topik
+          </a>
+        </button>
+      </div>
+
+      <div
+        class="d-flex justify-content-between align-items-center gap-4 main-search"
+      >
+        <h4 class="fw-bold">History</h4>
+          <div class="input-group">
+            <input type="text" class="form-i w-100" placeholder="Search...">
+            <span class="search-icon"><i class="bi bi-search"></i></span>
+          </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center gap-4">
+        <div class="d-flex align-items-center gap-2">
+          <div
+            class="selected px-3 py-2 rounded-pill cursor-pointer"
+            onclick="showContent('chats')"
+          >
+            <i class="bi bi-chat-dots"></i>
+            <span>Chats</span>
+          </div>
+
+          <div class="dropdown">
+            <span class="px-3 py-2 rounded-pill cursor-pointer dropdown-toggle border" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Attach
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <div
+                  class="px-3 py-2 rounded-pill cursor-pointer"
+                  onclick="showContent('archived')"
+                >
+                  <i class="bi bi-archive"></i>
+                  <span>Archived</span>
+                </div>
+              </li> 
+                <div
+                  class="px-3 py-2 rounded-pill cursor-pointer"
+                  onclick="showContent('export')"
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <i class="bi bi-box-arrow-up"></i>
+                  <span>Export</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Konten yang akan ditampilkan berdasarkan menu yang dipilih -->
+        <div id="content">
+            <div id="chats" class="content-section">
+            <!-- Konten Chats -->
+                <div class="row justify-content-center my-4">
+                    <div class="col-12 col-lg-6 col-md-6 mb-3 cursor">
+                        <br>
+                        <h5 style="color: grey;"><center>Belum ada konten...</center></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img
+                  src="../src/assets/img/pdf.png"
+                  alt="pdf"
+                  class="img-fluid"
+                  style="width: 5%; height: 5%; margin-right: 10px"
+                />
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">
+                  Export as PDF
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <span class="text-dark my-2">
+                  All your conversations with Chat Bot AI will be exported as
+                  PDF. Please choose a title for this file
+                </span>
+                <form action="" class="my-3">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Title"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-dark w-100 rounded-pill">
+                    Export
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- content -->
+
+    <!-- Vendor JS Files -->
+    <script src="../src/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="../src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="../src/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="../src/assets/vendor/quill/quill.js"></script>
+    <script src="../src/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="../src/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="../src/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../src/assets/js/main.js"></script>
+
+    <!-- Custom JS for menu -->
+    <script>
+      function showContent(menu) {
+        // Menyembunyikan semua konten
+        const sections = document.querySelectorAll(".content-section");
+        sections.forEach((section) => {
+          section.style.display = "none";
+        });
+
+        // Menyembunyikan kelas 'selected' dari semua menu
+        const menuItems = document.querySelectorAll(".d-flex .rounded-pill");
+        menuItems.forEach((item) => {
+          item.classList.remove("selected");
+        });
+
+        // Menampilkan konten yang sesuai dengan menu yang dipilih
+        document.getElementById(menu).style.display = "block";
+
+        // Menambahkan kelas 'selected' pada menu yang dipilih
+        const selectedItem = document.querySelector(
+          `.d-flex .cursor-pointer[onclick="showContent('${menu}')"]`
+        );
+        selectedItem.classList.add("selected");
+      }
+
+      // Set default content to 'chats' when the page loads
+      window.onload = function () {
+        showContent("chats");
+      };
+    </script>
+  </body>
+</html>

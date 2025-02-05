@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Chatbot</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="../src/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../src/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../src/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/quill/quill.snow.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/simple-datatables/style.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="../src/assets/css/style.css" rel="stylesheet" />
+    <link href="../src/assets/css/added.css" rel="stylesheet" >
+
+    <!-- Marked.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="d-flex align-items-center justify-content-between gap-4">
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <img class="logo" src="../src/assets/img/logo.png" alt="Logo" />
+        </div>
+      </div>
+      <!-- End Logo -->
+
+      <div 
+          class="header-nav ms-auto me-4" 
+          class="px-3 py-2 rounded-pill cursor-pointer"
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"  
+        >
+        <i class="bi bi-box-arrow-up"></i>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-heading">Hari Ini</li>
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <span>New Chat</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <span>Cara makan untuk diet</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <span>Rekomendasi menu ketika...</span>
+          </a>
+        </li>
+
+        <li class="nav-heading">Kemarin</li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <span>Resep tahu balado</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <span>Resep tempe mendoan ote...</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <span>Dessert yang cocok dengan...</span>
+          </a>
+        </li>
+        <!-- End Dashboard Nav -->
+      </ul>
+    </aside>
+    <!-- End Sidebar-->
+
+    <main id="main" class="main">
+      <div class="chat-box" id="chatBox"></div>
+      <h2 class="text-center title">Apa yang bisa saya bantu? &#128522;</h2>
+
+      <div class="row justify-content-center my-4">
+        <div class="col-12 col-lg-4 col-md-4 mb-3 cursor">
+          <div class="card-menu" onclick="fillInput('Enaknya Masak Apa? Di cuaca hujan begini')">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between">
+                <h4>Enaknya Masak Apa?</h4>
+                <i class="bi bi-arrow-up-right"></i>
+              </div>
+              <small>Di cuaca hujan begini...</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 col-md-4 mb-3 cursor">
+          <div class="card-menu" onclick="fillInput('Rekomendasi Menu Berdasarkan Bahan: Nasi, 1 ekor ayam, ikan asin, mentimun, ')">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between">
+                <h4>Rekomendasi Menu Berdasarkan Bahan</h4>
+                <i class="bi bi-arrow-up-right"></i>
+              </div>
+              <small>
+                Bahan yang saya miliki:
+                <ul>
+                  <li>nasi</li>
+                  <li>1 ekor ayam</li>
+                  <li>ikan asin</li>
+                  <li>mentimun</li>
+                  <li>...</li>
+                </ul>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 col-md-4 mb-3 cursor">
+          <div class="card-menu" onclick="fillInput('Buatkan Saya Resep: Cara membuat nasi goreng simple')">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between">
+                <h4>Buatkan Saya Resep!</h4>
+                <i class="bi bi-arrow-up-right"></i>
+              </div>
+              <small>Membuat nasi goreng simple</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer" class="footer fixed-bottom p-4">
+      <div class="d-flex justify-centent-center align-items-center gap-2">
+        <div class="input-group">
+          <span class="search-icon">
+            <div class="dropdown">
+              <span class="cursor-pointer dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-paperclip"></i>
+              </span>
+              <ul class="dropdown-menu">
+                <li>
+                  <div
+                    class="px-3 py-2 rounded-pill cursor-pointer"
+                    onclick="document.getElementById('fileInput').click();"
+                  >
+                    <i class="bi bi-archive"></i>
+                    <span>Archived</span>
+                  </div>
+                  <input type="file" id="fileInput" accept=".pdf,.docx" style="display: none;">
+                </li>
+                <li>
+                  <div
+                    class="px-3 py-2 rounded-pill cursor-pointer"
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    <i class="bi bi-box-arrow-up"></i>
+                    <span>Export</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </span>
+          <input type="text" id="userInput" class="form-i w-100" placeholder="Tanyakan sesuatu...">
+        </div>
+        <button class="btn btn-send rounded-pill" id="sendButton">
+          <i class="bi bi-send"></i>
+        </button>
+      </div>
+    </div>
+
+    <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img
+                  src="../src/assets/img/pdf.png"
+                  alt="pdf"
+                  class="img-fluid"
+                  style="width: 5%; height: 5%; margin-right: 10px"
+                />
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">
+                  Export as PDF
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <span class="text-dark my-2">
+                  All your conversations with Chat Bot AI will be exported as
+                  PDF. Please choose a title for this file
+                </span>
+                <form action="" class="my-3">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Title"
+                      id="Filename"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-dark w-100 rounded-pill" onclick="downloadPdfFromJson()">
+                    Export
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!-- Vendor JS Files -->
+    <script src="../src/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="../src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="../src/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="../src/assets/vendor/quill/quill.js"></script>
+    <script src="../src/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="../src/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="../src/assets/vendor/php-email-form/validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../src/assets/js/main.js"></script>
+    <script src="../src/assets/js/scripts1.js"></script>
+    <script src="../src/assets/js/func.js"></script>
+  </body>
+</html>

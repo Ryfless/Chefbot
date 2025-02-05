@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Chatbot</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="../src/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../src/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../src/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/quill/quill.snow.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="../src/assets/vendor/simple-datatables/style.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="../src/assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/assets/css/added.css">
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar header">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <div>
+            <img class="logo" src="../src/assets/img/logo.png" alt="Logo" />
+          </div>
+          <img src="../src/assets/img/logo1.png" alt="user">
+        </div>
+      </div>
+    </nav>
+    <!-- navbar -->
+
+    <!-- content -->
+    <main class="main-content">
+      <div class="d-flex justify-content-between">
+        <h1 class="text-premium fw-bold">
+          Temukan Berbagai Insipirasi Untuk Memasak
+        </h1>
+        <button class="btn bg-gradient rounded-pill fw-bold">
+          <a href="dashboard.html" class="text-white text-decoration-none">
+            <i class="bi bi-plus"></i> New Topik
+          </a>
+        </button>
+      </div>
+
+      <div
+        class="d-flex justify-content-between align-items-center gap-4 main-search"
+      >
+        <h4 class="fw-bold">History</h4>
+          <div class="input-group">
+            <input type="text" class="form-i w-100" placeholder="Search...">
+            <span class="search-icon"><i class="bi bi-search"></i></span>
+          </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center gap-4">
+        <div class="d-flex align-items-center gap-2">
+          <div
+            class="selected px-3 py-2 rounded-pill cursor-pointer"
+            onclick="showContent('chats')"
+          >
+            <i class="bi bi-chat-dots"></i>
+            <span>Chats</span>
+          </div>
+
+          <div class="dropdown">
+            <span class="px-3 py-2 rounded-pill cursor-pointer dropdown-toggle border" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Attach
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <div
+                  class="px-3 py-2 rounded-pill cursor-pointer"
+                  onclick="showContent('archived')"
+                >
+                  <i class="bi bi-archive"></i>
+                  <span>Archived</span>
+                </div>
+              </li> 
+                <div
+                  class="px-3 py-2 rounded-pill cursor-pointer"
+                  onclick="showContent('export')"
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <i class="bi bi-box-arrow-up"></i>
+                  <span>Export</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Konten yang akan ditampilkan berdasarkan menu yang dipilih -->
+      <div id="content">
+        <div id="chats" class="content-section">
+          <!-- Konten Chats -->
+          <div class="row justify-content-center my-4">
+            <div class="col-12 col-lg-6 col-md-6 mb-3 cursor">
+              <div class="card-menu">
+                <div class="card-body p-4">
+                  <h5 class="text-premium fst-italic mb-4">
+                    Enaknya Masak Apa?
+                  </h5>
+                  <p class="fs-6">
+                    Halo! Hari ini enaknya masak sesuai suasana hati. Saya punya
+                    beberapa rekomendasi:
+                  </p>
+                  <ol>
+                    <li>Jika ingin yang simpel, coba Nasi Goreng</li>
+                    <li>
+                      atau Mie Goreng. Kalau ingin yang berkuah, bagaimana
+                      dengan Sup
+                    </li>
+                    <li>
+                      Ayam atau Soto? Lagi kepikiran yang manis? Pisang Goreng
+                      atau Pancake bisa jadi pilihan!
+                    </li>
+                  </ol>
+                  <p>
+                    Mau resepnya? Atau ada bahan tertentu yang ingin kamu
+                    gunakan?
+                  </p>
+                  <small class="fst-italic">30 menit yang lalu</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-md-6 mb-3 cursor">
+              <div class="card-menu">
+                <div class="card-body p-4">
+                  <h5 class="text-premium fst-italic mb-4">
+                    Rekomendasi menu ketika hujan
+                  </h5>
+                  <p class="fs-6">
+                    Saat hujan, biasanya kita ingin menikmati makanan atau minuman yang hangat dan nyaman. Berikut beberapa rekomendasi menu yang cocok dinikmati saat hujan:
+                  </p>
+                  <ol>
+                    <li>Soto Ayam</li>
+                    <li>
+                      Bakso
+                    </li>
+                    <li>
+                      Mie Ayam Jamur
+                    </li>
+                  </ol>
+                  <p>
+                    Semoga rekomendasi ini bisa membuat waktu hujanmu lebih menyenangkan! 😊
+                  </p>
+                  <small class="fst-italic">7  jam yang lalu</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-md-6 mb-3 cursor">
+              <div class="card-menu">
+                <div class="card-body p-4">
+                  <h5 class="text-premium fst-italic mb-4">
+                    Resep tahu balado
+                  </h5>
+                  <p class="fs-6">
+                    Berikut adalah resep Tahu Balado yang mudah dan lezat untuk dicoba di rumah. Tahu balado adalah hidangan khas Indonesia yang menggabungkan tahu goreng dengan sambal balado pedas dan gurih.
+                  </p>
+                  <p class="fs-6">
+                    <strong>Bahan-bahan:</strong>
+                  </p>
+                  <ul>
+                    <li>
+                      5 buah tahu putih (potong dadu atau segitiga)
+                    </li>
+                    <li>
+                      3 sdm minyak goreng
+                    </li>
+                    <li>
+                      1 sdt garam (sesuai selera)
+                    </li>
+                    <li>
+                      1 sdt gula pasir
+                    </li>
+                    <li>
+                      ...
+                    </li>
+                  </ul>
+                  <small class="fst-italic">1 hari yang lalu</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-md-6 mb-3 cursor">
+              <div class="card-menu">
+                <div class="card-body p-4">
+                  <h5 class="text-premium fst-italic mb-4">
+                    Resep tempe mendoan otentik banyumas
+                  </h5>
+                  <p class="fs-6">
+                    Tempe Mendoan adalah camilan khas Banyumas, Jawa Tengah, yang terbuat dari tempe yang digoreng setengah matang dengan balutan tepung. Berikut resep otentik Tempe Mendoan Banyumas yang gurih dan lezat:
+                  <p class="fs-6">
+                    <strong>Bahan-bahan:</strong>
+                  </p>
+                  <ul>
+                    <li>
+                      1 papan tempe (iris tipis lebar, sekitar 1/2 cm)
+                    </li>
+                    <li>
+                      Minyak goreng secukupnya (untuk menggoreng)
+                    </li>
+                    <li>
+                      150 gram tepung terigu
+                    </li>
+                    <li>
+                      2 sdm tepung beras (untuk tekstur lebih renyah)
+                    </li>
+                    <li>
+                      ...
+                    </li>
+                  </ul>
+                  <small class="fst-italic">1 hari yang lalu</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-md-6 mb-3 cursor">
+              <div class="card-menu">
+                <div class="card-body p-4">
+                  <h5 class="text-premium fst-italic mb-4">
+                    Desert yang cocok dengan main course salty egg
+                  </h5>
+                  <p class="fs-6">
+                    Untuk hidangan utama dengan telur asin, Anda bisa mencoba membuat kue telur asin yang lembut dan gurih. Resep seperti Salted Egg Yolk Pound Cake atau Salted Egg Yolk Crystal Sago Cakes bisa menjadi pilihan yang menarik untuk melengkapi rasa asin dari hidangan utama Anda.
+                  </p>
+                  <ol>
+                    <li>
+                      Kue Panekuk
+                    </li>
+                    <li>
+                      Puding Sagu
+                    </li>
+                    <li>
+                      Kue Lapis Coklat
+                    </li>
+                    <li>
+                      Es Krim
+                    </li>
+                    <li>
+                      ...
+                    </li>
+                  </ol>
+                  <small class="fst-italic">1 hari yang lalu</small>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img
+                  src="../src/assets/img/pdf.png"
+                  alt="pdf"
+                  class="img-fluid"
+                  style="width: 5%; height: 5%; margin-right: 10px"
+                />
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">
+                  Export as PDF
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <span class="text-dark my-2">
+                  All your conversations with Chat Bot AI will be exported as
+                  PDF. Please choose a title for this file
+                </span>
+                <form action="" class="my-3">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Title"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-dark w-100 rounded-pill">
+                    Export
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- content -->
+
+    <!-- Vendor JS Files -->
+    <script src="../src/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="../src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="../src/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="../src/assets/vendor/quill/quill.js"></script>
+    <script src="../src/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="../src/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="../src/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../src/assets/js/main.js"></script>
+
+    <!-- Custom JS for menu -->
+    <script>
+      function showContent(menu) {
+        // Menyembunyikan semua konten
+        const sections = document.querySelectorAll(".content-section");
+        sections.forEach((section) => {
+          section.style.display = "none";
+        });
+
+        // Menyembunyikan kelas 'selected' dari semua menu
+        const menuItems = document.querySelectorAll(".d-flex .rounded-pill");
+        menuItems.forEach((item) => {
+          item.classList.remove("selected");
+        });
+
+        // Menampilkan konten yang sesuai dengan menu yang dipilih
+        document.getElementById(menu).style.display = "block";
+
+        // Menambahkan kelas 'selected' pada menu yang dipilih
+        const selectedItem = document.querySelector(
+          `.d-flex .cursor-pointer[onclick="showContent('${menu}')"]`
+        );
+        selectedItem.classList.add("selected");
+      }
+
+      // Set default content to 'chats' when the page loads
+      window.onload = function () {
+        showContent("chats");
+      };
+    </script>
+  </body>
+</html>
