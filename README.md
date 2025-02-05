@@ -1,2 +1,2 @@
 ![Alt text](logo.png)
-# Wellcome to Chefbot 🔥🧑‍🍳
+# Welcome to Chefbot 🔥🧑‍🍳
