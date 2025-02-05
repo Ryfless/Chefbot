@@ -1,6 +1,8 @@
 ![Alt text](logo.png)
 # Welcome to Chefbot 🔥🧑‍🍳
 
+---
+
 # Main Flow of Application
 
 1. **Landing Page_Guest Session (UI) Setup:**
